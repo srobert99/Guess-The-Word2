@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:hapticFeedbackEnabled="false"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/LivesTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bungee"
+            android:text="Lives:"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/Star1IV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <ImageView
+            android:id="@+id/Star2IV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <ImageView
+            android:id="@+id/Star3IV"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="0"
+            app:srcCompat="@android:drawable/btn_star" />
+
+        <TextView
+            android:id="@+id/ScoreTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="120dp"
+            android:layout_weight="0"
+            android:fontFamily="@font/bungee"
+            android:text="Score:0" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TitleTV"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:text="GUESS THE WORD"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.358" />
+
+    <TextView
+        android:id="@+id/WordTV"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:text="proba"
+        android:textSize="30sp"
+        app:autoSizeMaxTextSize="32sp"
+        app:autoSizeMinTextSize="20sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TitleTV"
+        tools:text="E X T R A T E R E S T R U" />
+
+    <Button
+        android:id="@+id/Letter1"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Letter2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Letter2"
+        app:layout_constraintVertical_bias="1.0"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter2"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Letter3"
+        app:layout_constraintEnd_toStartOf="@+id/Letter3"
+        app:layout_constraintStart_toEndOf="@+id/Letter1"
+        app:layout_constraintTop_toTopOf="@+id/Letter3"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter3"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="136dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter4"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Letter3"
+        app:layout_constraintEnd_toStartOf="@+id/Letter5"
+        app:layout_constraintStart_toEndOf="@+id/Letter3"
+        app:layout_constraintTop_toTopOf="@+id/Letter3"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter5"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginEnd="16dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Letter4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Letter4"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter6"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/Letter11"
+        app:layout_constraintStart_toStartOf="@+id/Letter1"
+        app:layout_constraintTop_toBottomOf="@+id/Letter1"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter7"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/Letter14"
+        app:layout_constraintStart_toStartOf="@+id/Letter2"
+        app:layout_constraintTop_toBottomOf="@+id/Letter2"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter8"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/Letter13"
+        app:layout_constraintStart_toStartOf="@+id/Letter3"
+        app:layout_constraintTop_toBottomOf="@+id/Letter3"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter9"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+
+        app:layout_constraintBottom_toTopOf="@+id/Letter12"
+        app:layout_constraintStart_toStartOf="@+id/Letter4"
+        app:layout_constraintTop_toBottomOf="@+id/Letter4"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter10"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/Letter12"
+        app:layout_constraintStart_toStartOf="@+id/Letter5"
+        app:layout_constraintTop_toBottomOf="@+id/Letter5"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter11"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+        android:textSize="18sp"
+
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Letter7"
+        app:layout_constraintStart_toStartOf="@+id/Letter6"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter12"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Letter10"
+        app:layout_constraintStart_toStartOf="@+id/Letter9"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter13"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Letter9"
+        app:layout_constraintStart_toStartOf="@+id/Letter8"
+        tools:text="A" />
+
+    <Button
+        android:id="@+id/Letter14"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="16dp"
+        android:autoText="false"
+        android:fontFamily="@font/bungee"
+        android:gravity="center"
+
+        android:textSize="18sp"
+        app:backgroundTint="#03A9F4"
+        app:elevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/Letter8"
+        app:layout_constraintStart_toStartOf="@+id/Letter7"
+        tools:text="A" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
